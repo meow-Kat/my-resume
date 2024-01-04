@@ -9,7 +9,10 @@ export default {
       borderWidth:{
         '20': '20px',
       },
-      
+      colors: {
+        'kevin-blue': '#10182b',
+        'kevin-blue-secound': '#213259',
+      },
       
     },
   },

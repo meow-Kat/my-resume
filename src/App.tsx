@@ -7,12 +7,12 @@ library.add(faB, faS, faHouseLaptop, faCheckSquare, faCoffee, faDatabase, faWind
 
 function App() {
   return (
-    <>
-      <Header/>
+    <div className='bg-kevin-blue-secound'>
+      {/* <Header/> */}
       <div className="container m-auto">
         <Resume />
       </div>
-    </>
+    </div>
   )
 }
 

@@ -1,13 +1,13 @@
 const Content = () => {
-    type info = {
+    type Info = {
         title: string,
         date: string,
         experience: string,
     }
-    const data:info = {
+    const data:Info = {
         title: 'Experience',
         date: '2021 ~ Now',
-        experience: 'GCREATE'
+        experience: 'GCREATE 創意數位科技有限公司'
     }
 
     return (
