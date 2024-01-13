@@ -3,13 +3,17 @@ import Contact from './resume_components/contact';
 import Content from './resume_components/content';
 import Skill from './resume_components/skill';
 import Directions from './resume_components/directions';
+import Collections from '../collections/collections';
 
 export const Resume = () => {
     type info = {
         name: string,
         job: string,
         profile: [string, string],
-        education: string,
+        education: {
+            school: string,
+            date: string
+        },
     }
 
     const data:info = {
@@ -19,7 +23,10 @@ export const Resume = () => {
             '我之前是藥物分析研究員，在藥廠工作五年，負責新藥開發的分析工作。在工作中，我培養了嚴謹的邏輯思維和問題解決能力，以及良好的團隊合作精神。兩年前，我決定轉職成為網頁工程師。目前，我在創意數位科技公司擔任全端開發工程師，在兩年裡，我參與了多個大型專案，從無到有開發了多個系統。',
             '我熱愛程式開發，並且一直在不斷學習和成長。我相信，我的專業能力和個人特質能夠勝任貴公司的職位。我希望有機會與您深入交流，並為貴公司做出貢獻。'
         ],
-        education: '嘉南藥理科技大學',
+        education: {
+            school: '嘉南藥理科技大學',
+            date: '2008 ~ 2012'
+        },
     }
 
 
@@ -45,14 +52,18 @@ export const Resume = () => {
                 </div>
                 <div className="">
                     <h2 className="uppercase text-white text-xl font-bold mb-8">Education</h2>
-                    <p className='text-white'>{data.education}</p>
+                    <div className='flex items-center gap-4'>
+                        <p className='text-white flex items-center justify-center w-fit px-4 py-2 bg-red-400 rounded-3xl'>{data.education.date}</p>
+                        <span className='w-6 h-6 bg-white rounded-full block' />
+                        <p className='text-white text-xl'>{data.education.school}</p>
+                    </div>
                 </div>
             </div>
-            
             <div className="col-span-2 bg-kevin-blue px-8 py-16 flex gap-8 flex-col">
                 <Skill/>
                 <Content/>
                 <Directions/>
+                <Collections/>
             </div>
         </div>
     )
